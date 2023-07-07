@@ -3,7 +3,7 @@ name: Push Changes
 on:
   push:
     branches:
-      - main
+      - dev
 
 # -------------------------------
 #  Optionally run on other events
