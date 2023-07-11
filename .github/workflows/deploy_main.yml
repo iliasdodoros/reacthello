@@ -1,9 +1,8 @@
-name: Build and Test 
+name: Deploy main to AWS
 
 on:
-  push:
-    branches-ignore:
-      - main
+  pull_request: 
+    branches: main
 
 jobs:
   build_test:
