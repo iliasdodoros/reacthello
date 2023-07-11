@@ -1,4 +1,4 @@
-name: Build and Test 
+name: Build and Test dev branch
 
 # Controls when the action will run. 
 on:
