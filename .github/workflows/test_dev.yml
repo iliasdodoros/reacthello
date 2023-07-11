@@ -3,7 +3,7 @@ name: Build and Test dev branch
 on:
   push:
     branches-ignore:
-      - master
+      - main
 
 jobs:
   build_test:
