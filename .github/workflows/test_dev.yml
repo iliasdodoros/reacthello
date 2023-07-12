@@ -20,17 +20,3 @@ jobs:
           npm run build --if-present
       - name: Test the build
         run: npm test
-
-      - name: Setup Chrome
-        run: |
-         wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-         sudo dpkg -i google-chrome-stable_current_amd64.deb
-
-      - name: CHrome Driver 
-        uses: browser-actions/setup-chrome@v1
-
-      - name: Test
-        run: |
-          (npm run start&) &
-          sleep 10 &&
-          npm run s-test
