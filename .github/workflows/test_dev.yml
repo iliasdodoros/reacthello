@@ -25,5 +25,5 @@ jobs:
         run: |
           npm start &
           sleep 10 &&
-          curl http://localhost:8000 &&
+          curl http://localhost:3000 &&
           npm run s-test
