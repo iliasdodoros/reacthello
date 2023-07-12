@@ -22,7 +22,10 @@ jobs:
         run: npm test
 
       - name: Setup Chrome
-        run: sudo apt install -y chrome
+        run: |
+         wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+         sudo dpkg -i google-chrome-stable_current_amd64.deb
+
       - name: CHrome Driver 
         uses: browser-actions/setup-chrome@v1
 
