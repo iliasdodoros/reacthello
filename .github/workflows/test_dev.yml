@@ -22,7 +22,7 @@ jobs:
         run: npm test
 
       - name: Setup Chrome
-        run: sudo apt-fast install -y google-chrome
+        run: sudo apt-fast install -y chrome
       - name: CHrome Driver 
         uses: browser-actions/setup-chrome@v1
 
