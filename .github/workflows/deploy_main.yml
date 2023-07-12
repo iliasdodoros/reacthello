@@ -27,8 +27,5 @@ jobs:
           logout: true
       - name: Build Server image
         run: docker build -t iliasdodoros/reacthello .
-      - name: Tag our Image
-        run: docker tag iliadodoros/reacthello 
-             iliasdodoros/reacthello:0.1
       - name: Push to dockerhub
         run: docker push iliasdodoros/reacthello
