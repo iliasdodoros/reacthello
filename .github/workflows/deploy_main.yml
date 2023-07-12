@@ -1,7 +1,7 @@
 name: Deploy main to AWS
 
 on:
-  pull_request: 
+  push: 
     branches: main
 
 jobs:
@@ -32,12 +32,3 @@ jobs:
              iliasdodoros/reacthello:latest
       - name: Push to dockerhub
         run: docker push iliasdodoros/reacthello
-      - name: Deploy to EB
-        uses: einaregilsson/beanstalk-deploy@v14
-        with:
-          aws_access_key: ${{ secrets.AWS_ACCESS_KEY }}
-          aws_secret_key: ${{ secrets.AWS_ACCESS_SECRET_KEY }}
-          application_name: reacthello
-          environment_name: reacthelloenv
-          version_label: "app-cbe0-210131_121135"
-          region: us-west-2
