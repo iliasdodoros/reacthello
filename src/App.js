@@ -1,3 +1,4 @@
+import React from "react";
 import logo from './logo.svg';
 import './App.css';
 
@@ -14,6 +15,7 @@ function App() {
           href="https://reactjs.org"
           target="_blank"
           rel="noopener noreferrer"
+          id="App-link"
         >
           Learn React
         </a>
