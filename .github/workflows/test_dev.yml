@@ -20,14 +20,6 @@ jobs:
           npm run build --if-present
       - name: Test the build
         run: npm test
-  test_build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Test the build
-        run: npm test
-  test_with_selenium:
-    runs-on: ubuntu-latest
-    steps:
       - name: Start the server
         run: npm start
       - name: Test
