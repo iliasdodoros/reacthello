@@ -20,7 +20,10 @@ jobs:
           npm run build --if-present
       - name: Test the build
         run: npm test
-      - name: Setup Chromedriver
+
+      - name: Setup Chrome
+        run: sudo apt-fast install -y google-chrome
+      - name: CHrome Driver 
         uses: browser-actions/setup-chrome@v1
 
       - name: Test
