@@ -18,16 +18,6 @@ var browser = new webdriver.Builder()
 	.withCapabilities({ browserName: "chrome" })
 	.build();
 
-/**
- * Config for Firefox browser (Comment Chrome config when you intent to test in Firefox)
- * @type {webdriver}
- */
-/*
-var browser = new webdriver.Builder()
-	.usingServer()
-	.withCapabilities({ browserName: "firefox" })
-	.build();
- */
 
 /**
  * Function to get the title and resolve it it promise.
@@ -41,17 +31,6 @@ function logTitle() {
 	});
 }
 
-/**
- * Sample test case
- * To check whether the given value is present in array.
- */
-describe("Array", function() {
-	describe("#indexOf()", function() {
-		it("should return -1 when the value is not present", function() {
-			assert.equal([1, 2, 3].indexOf(4), -1);
-		});
-	});
-});
 
 describe("Home Page", function() {
 	/**
