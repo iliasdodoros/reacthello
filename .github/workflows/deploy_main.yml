@@ -26,7 +26,7 @@ jobs:
           password: ${{secrets.DOCKERHUB_TOKEN}}
           logout: true
       - name: Build Server image
-        run: docker build -t iliasdodoros/reacthello
+        run: docker build -t iliasdodoros/reacthello .
       - name: Tag our Image
         run: docker tag iliadodoros/reacthello 
              iliasdodoros/reacthello:latest
