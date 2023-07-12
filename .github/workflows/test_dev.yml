@@ -20,7 +20,10 @@ jobs:
           npm run build --if-present
       - name: Test the build
         run: npm test
-      - name: Start the server
-        run: npm start
+
       - name: Test
-        run: npm s-test
+        run: |
+          npm start &
+          sleep 10 &&
+          curl http://localhost:8000 &&
+          npm run s-test
