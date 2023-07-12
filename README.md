@@ -1,4 +1,4 @@
-#GitHub Guidelines
+# GitHub Guidelines
 
 ## Branches
 
@@ -15,5 +15,62 @@ Each pull request should be approved by designated users (senior developers) and
 
 Issues should be created for every change that we want to do to the code. Each issue should have a title that is easy to understand and an appropriate label. Like mentioned above we can also create a new branch that is assosiated with an issue to work on the issue and when it is resolved we can create a pull request to the main branch.           
 
-# Actions
+# Pipeline (Actions)
+Our pipeline looks like this 
+
+### BUILD -> TEST -> PACKAGE -> DEPLOY 
+
+The pipeline is implemented with GitHub Actions. We use tvo actions, one for the main branch which is the whole pipeline and one for all the other branches.
+
+The GitHub Action that implements the above pipeline is shown below while the one for all the other branches is just the build and test steps :
+
+```YAML
+name: Deploy Main Branch
+on:
+  push: 
+    branches: main
+jobs:
+ build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 20
+      - name: Install Dependencies
+        run: npm ci
+      - name: Build Application
+        run: npm run build
+ test:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 20
+      - name: Install Dependencies
+        run: npm ci
+      - name: Run Tests
+        run: npm test
+ package:
+   name: Package
+   runs-on: ubuntu-latest
+   steps:
+     - name: Docker Login
+       uses: docker/login-action@v1.8.0
+       with:
+         username: ${{secrets.DOCKERHUB_USERNAME}}
+         password: ${{secrets.DOCKERHUB_TOKEN}}
+         logout: true
+     - name: Build Server image
+       run: docker build -t iliasdodoros/reacthello .
+     - name: Push to dockerhub
+       run: docker push iliasdodoros/reacthello
+```
 
