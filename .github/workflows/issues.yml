@@ -14,5 +14,6 @@ jobs:
         with:
           # You can target a project in a different organization
           # to the issue
-          project-url: https://github.com/users/iliasdodoros/projects/2
+          project-url: https://github.com/orgs/Uni-Systems-SMSA/projects/1
           github-token: ${{ secrets.ADD_TO_PROJECT_PAT }}
+# https://github.com/settings/tokens/new
