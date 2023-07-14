@@ -8,7 +8,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and update #3 to reload.
+          Edit <code>src/App.js</code> and update tortoise #1 to reload.
         </p>
         <a
           className="App-link"
