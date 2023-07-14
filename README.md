@@ -4,20 +4,20 @@
 
 ### Admins
 1. [Create GitHub account](https://github.com/iliasdodoros/reacthello#github-account)
-2. Create Organization
-3. Invite members to Organization
-4. Create Teams
-5. Create repositories
-6. Add Branch protection Rules
-7. Add Teams to Repositories
-8. Create Projects
-9. Create pipeline
+2. [Create Organization](https://github.com/iliasdodoros/reacthello#creating-an-organization-administrators-only)
+3. [Invite members to Organization](https://github.com/iliasdodoros/reacthello#teams)
+4. [Create Teams](https://github.com/iliasdodoros/reacthello#teams)
+5. [Create repositories](https://github.com/iliasdodoros/reacthello#repositories)
+6. [Add Branch protection Rules]()
+7. [Add Teams to Repositories](https://github.com/iliasdodoros/reacthello#repositories)
+8. [Create Projects](https://github.com/iliasdodoros/reacthello#projects)
+9. [Create pipeline]()
 
 ### Members
-1. Create Github account
-2. Accept invitation to Organization
-3. Download the necessary software
-4. Read the guidelines
+1. [Create Github account](https://github.com/iliasdodoros/reacthello#github-account)
+2. [Accept invitation to Organization](https://github.com/iliasdodoros/reacthello#teams)
+3. [Download the necessary software](https://github.com/iliasdodoros/reacthello#software-installation)
+4. [Read the guidelines](https://github.com/iliasdodoros/reacthello#pipeline)
 5. Start working
 
 # Getting started 
