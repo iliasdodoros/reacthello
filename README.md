@@ -1,74 +1,42 @@
-# GitHub Guidelines
-## Teams 
+# Getting started 
+This repository is a guideline for creating repositories to use in projects and this is a guide on how to create it and use it. This quide explains step-by-step creating an GitHub account,creating an organization to group many projects together, downloading and installing the necessary software for each member and finally creating a CI/CD pipeline to use when creating a new piece of software and deploying it on a server. 
 
-We can create as many teams as we want. Each member of one team has the ;ermissions that we set for the whole team. One of the teams should be for those that should have admin access to the repository
+## GitHub Account
+Each member of the project must have a GitHub account you can create one [here](https://github.com/) by entering your information and your preferences.The next step is to create an Organiztion in GitHub to organize your projects and you members in teams for easier control (this is for administrators). 
 
+### Creating an Organization (Administrators only)
 
+To create an Organization you can Sign In on your GitHub account and then going into Settings -> Organizations -> New Organization. In the new page that opens you can choose your plan. The Free plan has almost all the functionality we will use in this case except you cannot use Code Owners (more on that later). Once you choose your plan then you have to choose a name for you Organization and who owns this Organization and then your Organization is Created. The person that created the organization is the Organization Owner. Generally inside a GitHub Organization everyone has one role from the following   
+- Owner
+- Member
+- Moderator
+- Billing Manager
+- Security Manager (Beta)
+- Outside Collaborator
+- GitHub App Manager
 
+You can find an dditional inforamtion one the differences of these roles [here](https://docs.github.com/en/organizations/managing-peoples-access-to-your-organization-with-roles/roles-in-an-organization).
 
-## Branches
+### Teams 
 
-- The main branch contains the last stable version of the code and this is the version that is deployed. The main branch should be protected.
-Setting -> Branches -> Add rule -> Branch name : main and make sure to check require a pull request before merging (check whichever is suited for the current project) and Do not allow bypassing the above settings
+After an Organization is created you can invite people ot your organization by going to your Organization Home Page -> People -> Invite member and searching by their GitHub username. Once you choose one you can send the invitation and an email will be sent to them. 
 
-- For every update that we want to develop we create a new branch with a appropriate name
+Once you have invited everyone that you want to be part of you organization you can start creating Teams to divide people in groups depending on their role in a project. To create a team you can go to your Organization Home Page -> Teams -> New team and then choose the details for each Team. Once you create a Team you can go to your Teams page form your Organization Home Page and select the Team and Add a member you want to be part of the team. 
+### Repositories
 
-We can also create an issue or choose an existing one and then [create a branch to work for this issue](https://docs.github.com/en/issues/tracking-your-work-with-issues/creating-a-branch-for-an-issue "create a branch to work for this issue").
+After you have create all the teams you need and added all the members you can start Creating new repositories by going to your Organization Home Page -> Repositories -> New Repository and filling out the details for the new repository. When you create a new repository you can find it in the Repositories page adn by selecting you can all the information about it. 
 
-### Pull Requests
+To select a team to work a repository you can go to the Teams Page and select a team. Then on the team's page you can go to Repositories and add a repository from those you have created. 
 
-Whenever we want to change something in the main branch (for example fixing a bug) the only way we can do this is with a pull request (simply pushing to main is disabled).
-Each pull request should be approved by designated users (senior developers) and to be able to merge all the chosen test must be passed. Also a to reduce conflicts each branch should be up to date with main before the pull request.
+### Projects 
 
-## Issues
+GitHub has a feature called
 
-Issues should be created for every change that we want to do to the code. Each issue should have a title that is easy to understand and an appropriate label. Like mentioned above we can also create a new branch that is assosiated with an issue to work on the issue and when it is resolved we can create a pull request to the main branch.           
+## Software Installation
+Once you have a GitHub account the next step is preping your computer. You will need two applications Git and TortoiseGit.
 
+### Git
+You can download the correct version for your computer of Git from [here](https://git-scm.com/downloads) and then run the installation Wizard that you donloaded. Follow the steps in the Installation Wizard without changing anything (unless you know for sure what you are doing) and then press Install.
 
-## Secrets 
-before explaining the pipeline we have to explain GitHub Secrets.Secrets are a safe way to store sensitive information that we can use in the pipeline. For example : passwords, tokens, RSA keys ,....
-We can set secrets by going to Settings -> Secrets and Variables -> Actions -> New repository secret. We have to be careful what secrets we add and to make sure we have a buck up because once we set them we can not view them again.
-Our pipeline looks like this 
-
-# Pipeline 
-### BUILD -> TEST -> PACKAGE -> DEPLOY 
-
-The pipeline is implemented with GitHub Actions. We use tvo actions, one for the main branch which is the whole pipeline and one for all the other branches. Actions often need access to sensitive information, like passwords, and we store them with secrets so that we can easily access them in an Action with `secrets.<SECRET_NAME>`
-
-The GitHub Action that implements the above pipeline is shown below while the one for all the other branches is just the build and test steps :
-
-```YAML
-name: Deploy Main Branch
-on:
-  push: 
-    branches: main
-jobs:
- build:
-    name: Build
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: 20
-      - name: Install Dependencies
-        run: npm ci
-      - name: Build Application
-        run: npm run build
- test:
-    name: Test
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: 20
-      - name: Install Dependencies
-        run: npm ci
-      - name: Run Tests
-        run: npm test
-```
+### TortoiseGit
+You can download the correct version for your computer of Git from [here](https://tortoisegit.org/download/) and then run the installation Wizard that you donloaded. Follow the steps in the Installation Wizard without changing anything (unless you know for sure what you are doing) and then press Install.
