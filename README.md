@@ -22,7 +22,7 @@ After an Organization is created you can invite people ot your organization by g
 Once you have invited everyone that you want to be part of you organization you can start creating Teams to divide people in groups depending on their role in a project. To create a team you can go to your Organization Home Page -> Teams -> New team and then choose the details for each Team. Once you create a Team you can go to your Teams page form your Organization Home Page and select the Team and Add a member you want to be part of the team. 
 
 ### Repositories
-After you have create all the teams you need and added all the members you can start Creating new repositories by going to your Organization Home Page -> Repositories -> New Repository and filling out the details for the new repository. When you create a new repository you can find it in the Repositories page adn by selecting you can all the information about it. 
+After you have create all the teams you need and added all the members you can start Creating new repositories by going to your Organization Home Page -> Repositories -> New Repository and filling out the details for the new repository. When you create a new repository you can find it in the Repositories page and by selecting you can see all the information about it. 
 
 To select a team to work a repository you can go to the Teams Page and select a team. Then on the team's page you can go to Repositories and add a repository from those you have created. Additionally you can change the permissionsthat each team's members have on a repository by going to the team's Repository Pgae and choosing from the drop-down list one of the following: 
 - **Read**: Recommended for non-code contributors who want to view or discuss your project
@@ -38,15 +38,38 @@ GitHub has a feature called Projects which is a way to manage tasks and has a di
 Once you have a GitHub account the next step is preping your computer. You will need two applications Git and TortoiseGit.
 
 ### Git
-You can download the correct version for your computer of Git from [here](https://git-scm.com/downloads) and then run the installation Wizard that you downloaded. Follow the steps in the Installation Wizard without changing anything (unless you know for sure what you are doing) and then press Install.
-
-### TortoiseGit
-You can download the correct version for your computer of TortoiseGit from [here](https://tortoisegit.org/download/) and then run the installation Wizard that you downloaded. Follow the steps in the Installation Wizard without changing anything (unless you know for sure what you are doing) and then press Install.
+You can download the correct version for your computer of Git from [here](https://git-scm.com/downloads) and then run the installation Wizard you downloaded. Follow the steps in the Installation Wizard without changing anything (unless you know for sure what you are doing) and then press Install. You can use Git from the command line or by opening Git Bash but this is not necessary because everyone can use the application TortoiseGit that we will install below which is essentially a plugin for the Windows File Explorer. 
 
 ### Visual Studio Code
+The developers of the project can download Visual Studio Code which has a very good integration with Git and is very easy to use with many extensions. If you dont want to use Visual Studio Code and the IDE of your choice does not have an integration with Git you can download TortoiseGit by following the guide below. You can download the correct version for your computer of Visual Studio Code from [here](https://tortoisegit.org/download/) and then run the installation Wizard you downloaded. Follow the steps in the Installation Wizard without changing anything (unless you know for sure what you are doing) and then press Install.
 
+### TortoiseGit
+If you don't want to use git or Visual Studio Code to make changes to the project, for example if you are not a developer, you can use TortoiseGit which is a plugin for Windows File Explorer and is really easy to install and use. You can download the correct version for your computer of TortoiseGit from [here](https://tortoisegit.org/download/) and then run the installation Wizard you downloaded. Follow the steps in the Installation Wizard without changing anything (unless you know for sure what you are doing) and then press Install. Once installed in File Explorer when you right click another optoin should appear called TortoiseGit and you can choose to clone a repository from GitHub by copying the URL of the repository and pasting in the dialog. Additionally you can check the box that says Branch and write the name of the branch that you want to download (in the Pipeline section of this guide you can see what branches are and how you can use them). Once you do that all the files from that branch will be downloaded and will appear in the folder.  
 
+# Quick setup
 
+## Getting started 
+
+### Admins
+1. Create GitHub account
+2. Create Organization
+3. Invite members to Organization
+4. Create Teams
+5. Create repositories
+6. Add Branch protection Rules
+7. Add Teams to Repositories
+8. Create Projects
+9. Create pipeline
+
+### Members
+1. Create Github account
+2. Accept invitation to Organization
+3. Download the necessary software
+4. Read the guidelines
+5. Start working
+
+## Pipeline 
+TODO
 
 
 
