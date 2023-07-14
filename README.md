@@ -1,3 +1,25 @@
+# Quick setup
+
+## Getting started 
+
+### Admins
+1. [Create GitHub account](https://github.com/iliasdodoros/reacthello#github-account)
+2. Create Organization
+3. Invite members to Organization
+4. Create Teams
+5. Create repositories
+6. Add Branch protection Rules
+7. Add Teams to Repositories
+8. Create Projects
+9. Create pipeline
+
+### Members
+1. Create Github account
+2. Accept invitation to Organization
+3. Download the necessary software
+4. Read the guidelines
+5. Start working
+
 # Getting started 
 This repository is a guideline for creating repositories to use in projects and this is a guide on how to create it and use it. This quide explains step-by-step creating an GitHub account,creating an organization to group many projects together, downloading and installing the necessary software for each member and finally creating a CI/CD pipeline to use when creating a new piece of software and deploying it on a server. 
 
@@ -46,27 +68,7 @@ The developers of the project can download Visual Studio Code which has a very g
 ### TortoiseGit
 If you don't want to use git or Visual Studio Code to make changes to the project, for example if you are not a developer, you can use TortoiseGit which is a plugin for Windows File Explorer and is really easy to install and use. You can download the correct version for your computer of TortoiseGit from [here](https://tortoisegit.org/download/) and then run the installation Wizard you downloaded. Follow the steps in the Installation Wizard without changing anything (unless you know for sure what you are doing) and then press Install. Once installed in File Explorer when you right click another optoin should appear called TortoiseGit and you can choose to clone a repository from GitHub by copying the URL of the repository and pasting in the dialog. Additionally you can check the box that says Branch and write the name of the branch that you want to download (in the Pipeline section of this guide you can see what branches are and how you can use them). Once you do that all the files from that branch will be downloaded and will appear in the folder.  
 
-# Quick setup
 
-## Getting started 
-
-### Admins
-1. Create GitHub account
-2. Create Organization
-3. Invite members to Organization
-4. Create Teams
-5. Create repositories
-6. Add Branch protection Rules
-7. Add Teams to Repositories
-8. Create Projects
-9. Create pipeline
-
-### Members
-1. Create Github account
-2. Accept invitation to Organization
-3. Download the necessary software
-4. Read the guidelines
-5. Start working
 
 ## Pipeline 
 TODO
