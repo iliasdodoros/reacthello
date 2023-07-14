@@ -3,6 +3,9 @@
 
 We can create as many teams as we want. Each member of one team has the ;ermissions that we set for the whole team. One of the teams should be for those that should have admin access to the repository
 
+
+
+
 ## Branches
 
 - The main branch contains the last stable version of the code and this is the version that is deployed. The main branch should be protected.
