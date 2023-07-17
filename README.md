@@ -18,7 +18,6 @@
 2. [Accept invitation to Organization](https://github.com/iliasdodoros/reacthello#teams)
 3. [Download the necessary software](https://github.com/iliasdodoros/reacthello#software-installation)
 4. [Read the guidelines](https://github.com/iliasdodoros/reacthello#pipeline)
-5. Start working
 
 # Getting started 
 This repository is a guideline for creating repositories to use in projects and this is a guide on how to create it and use it. This quide explains step-by-step creating an GitHub account,creating an organization to group many projects together, downloading and installing the necessary software for each member and finally creating a CI/CD pipeline to use when creating a new piece of software and deploying it on a server. 
@@ -36,7 +35,7 @@ To create an Organization you can Sign In on your GitHub account and then going 
 - Outside Collaborator
 - GitHub App Manager
 
-You can find an dditional information one the differences of these roles [here](https://docs.github.com/en/organizations/managing-peoples-access-to-your-organization-with-roles/roles-in-an-organization).
+You can find additional information one the differences of these roles [here](https://docs.github.com/en/organizations/managing-peoples-access-to-your-organization-with-roles/roles-in-an-organization).
 
 ### Teams 
 After an Organization is created you can invite people ot your organization by going to your Organization Home Page -> People -> Invite member and searching by their GitHub username. Once you choose one you can send the invitation and an email will be sent to them. 
