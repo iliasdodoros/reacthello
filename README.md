@@ -1,7 +1,5 @@
 # Quick setup
 
-## Getting started 
-
 ### Admins
 1. [Create GitHub account](https://github.com/iliasdodoros/reacthello#github-account)
 2. [Create Organization](https://github.com/iliasdodoros/reacthello#creating-an-organization-administrators-only)
@@ -12,6 +10,10 @@
 7. [Add Teams to Repositories](https://github.com/iliasdodoros/reacthello#repositories)
 8. [Create Projects](https://github.com/iliasdodoros/reacthello#projects)
 9. [Create pipeline]()
+    - Build
+    - Test
+    - Package
+    - Deploy
 
 ### Members
 1. [Create Github account](https://github.com/iliasdodoros/reacthello#github-account)
@@ -67,10 +69,10 @@ The developers of the project can download Visual Studio Code which has a very g
 ### TortoiseGit
 If you don't want to use git or Visual Studio Code to make changes to the project, for example if you are not a developer, you can use TortoiseGit which is a plugin for Windows File Explorer and is really easy to install and use. You can download the correct version for your computer of TortoiseGit from [here](https://tortoisegit.org/download/) and then run the installation Wizard you downloaded. Follow the steps in the Installation Wizard without changing anything (unless you know for sure what you are doing) and then press Install. Once installed in File Explorer when you right click another optoin should appear called TortoiseGit and you can choose to clone a repository from GitHub by copying the URL of the repository and pasting in the dialog. Additionally you can check the box that says Branch and write the name of the branch that you want to download (in the Pipeline section of this guide you can see what branches are and how you can use them). Once you do that all the files from that branch will be downloaded and will appear in the folder.  
 
-
-
 ## Pipeline 
-TODO
+The pipeline is the procedure we follow to create new projects and change existing ones. The pipeline we use is made of four steps : Build -> Test -> Package -> Deploy.
+
+### Build 
 
 
 
