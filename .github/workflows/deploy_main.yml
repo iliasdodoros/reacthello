@@ -60,5 +60,5 @@ jobs:
      - name: Docker Image Artifact Upload
        uses: ishworkh/docker-image-artifact-upload@v2.1.0
        with:
-         image: "reacthello:latest"
+         image: "iliasdodoros/reacthello:latest"
       
