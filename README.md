@@ -73,7 +73,23 @@ If you don't want to use git or Visual Studio Code to make changes to the projec
 The pipeline is the procedure we follow to create new projects and change existing ones. The pipeline we use is made of four steps : Build -> Test -> Package -> Deploy.
 
 ### Build 
+This is the step that we create new software, we make changes to old, we write the documentation and we generally work on our project. The building step in our pipeline is also managed with GitHub where we can make changes in a controlled enviroment without risking the functionality of older versions. In Github and other Version Control Systems we can separate our work in Branches. Each branch is a version of our project and we can work on one Branch without affecting the others. In our case and in most cases there is a main branch where we have the latest stable version of our project. The main branch is the one we see when we open our GitHub repository and we don't make any changes to it directly. When someone wants to make a change in our project (or many changes) the correct way is to create a new branch make changes there and when we are done we can create a pull request to merge the branch we have created with the main branch.
 
+#### Making changes
+To make a change in th Project everyone has to follow these steps :
+1. Clone the repository by right-clicking on the folder you want to save it, choosing TortoiseGit -> Clone. In the window that appears just paste the link of the repository on GitHub and press OK.
+2. When the downloading is complete you can see a new folder with the repository name and in it we can see all the files. NOTE: This is the main Branch
+3. To change to a branch that we can make changes we can right-click again (while being in the repository folder) and choose TortoiseGit -> Switch/Checkout. On the window that appears either we choose a branch from the dropdown list and we deselect the Create New Branch box or if we want to create a new branch we select the branch from which we want to create the new branch, we select the Create New Branch box and we choose the name. Finally we press OK.
+4. Now that we have a branch that it is okay to make changes we make whatever changes we want.
+5. When we finish we have to save our work. To do that we right-click again in our folder whe choose TortoiseGit -> Commit... and in the window that appears we right a message to explain our changes and we press Commit. Now we can also push our changes to GitHub so that someone else can continue working on our Branch with the new changes we just made. To push we can right-click and select TortoiseGit -> Push. In the window that appears we choose the local branch we want to push and the remote branch we want to push to and we press OK. NOTE: if we try to push directly to main the process will fail.
+6. Now our new changes are available for every one to see in GitHub.
+7. To transfer hose changes to the main branch we can't just push are changes like we can to other branches. Instead we have to create a Pull Request. To do that we can go to GitHub where we can have a better view of what we are trying to do. To create th pull request we go to the Pull Request Page and press New Pull Request. In the next page we choose the branches and if we did the previous step correctly a green Able to merge badge we appear and we can press the Create pull request button.
+8. From this point the pull request is open and the tests will run to see if those changes break something in our project. If the tests are successfull a senior will have to review the pull request and if it is approved the changes will pass to the main branch.
+
+### Test 
+The next step in the pipeline is testing and this primarly involves the developers. When the code changes we have to amke sure it works like it is supposed to before we continue to package and deploy it. For that reason every developer should create tests (unit, performance, etc) while writing the code and when it is finished the tests are run automatically with GitHub Actions and if something fails it can't be merged to main. It is very important to create tests that cover every aspect of the software to find as many bugs as we can.
+
+### Package 
 
 
 
