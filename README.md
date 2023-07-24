@@ -1,7 +1,5 @@
 # Quick setup
 
-
-
 ### Admins
 1. [Create GitHub account](https://github.com/iliasdodoros/reacthello#github-account)
 2. [Create Organization](https://github.com/iliasdodoros/reacthello#creating-an-organization-administrators-only)
