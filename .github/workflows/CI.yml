@@ -50,7 +50,6 @@ jobs:
         uses: aws-actions/amazon-ecr-login@v1
       - name: Docker login
         run: aws ecr get-login-password | docker login --username AWS --password-stdin 222757818682.dkr.ecr.eu-north-1.amazonaws.com
-      - name: Get Commit hash
       - id: commit
         uses: pr-mpt/actions-commit-hash@v2
       - name: Build, tag, and push image to Amazon ECR
