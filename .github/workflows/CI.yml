@@ -52,7 +52,7 @@ jobs:
         env:
           ECR_REGISTRY: 222757818682.dkr.ecr.eu-north-1.amazonaws.com/devops-sample
           ECR_REPOSITORY: devops-sample
-          IMAGE_TAG: $(git rev-parse --short ${{ github.event.pull_request.head.sha }})
+          IMAGE_TAG: latest
         run: |
           docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
           docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
