@@ -48,6 +48,8 @@ jobs:
           aws-region: eu-north-1
       - name: Login to Amazon ECR
         uses: aws-actions/amazon-ecr-login@v1
+      - name: Docker login
+        run: aws ecr get-login-password | docker login --username AWS --password-stdin 222757818682.dkr.ecr.eu-north-1.amazonaws.com
       - name: Build, tag, and push image to Amazon ECR
         env:
           ECR_REGISTRY: 222757818682.dkr.ecr.eu-north-1.amazonaws.com/devops-sample
