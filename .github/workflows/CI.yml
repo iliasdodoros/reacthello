@@ -54,7 +54,8 @@ jobs:
         env:
           ECR_REGISTRY: 222757818682.dkr.ecr.eu-north-1.amazonaws.com
           ECR_REPOSITORY: devops-sample
-          IMAGE_TAG: latest
+          COMMIT_HASH: $(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
+          IMAGE_TAG: ${COMMIT_HASH:=latest}
         run: |
           docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
           docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
