@@ -52,7 +52,7 @@ jobs:
         run: aws ecr get-login-password | docker login --username AWS --password-stdin 222757818682.dkr.ecr.eu-north-1.amazonaws.com
       - name: Build, tag, and push image to Amazon ECR
         env:
-          ECR_REGISTRY: 222757818682.dkr.ecr.eu-north-1.amazonaws.com/devops-sample
+          ECR_REGISTRY: 222757818682.dkr.ecr.eu-north-1.amazonaws.com
           ECR_REPOSITORY: devops-sample
           IMAGE_TAG: latest
         run: |
